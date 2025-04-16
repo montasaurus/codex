@@ -5,21 +5,21 @@ ENV TZ="$TZ"
 
 # Install basic development tools and iptables/ipset
 RUN apt update && apt install -y less \
+  aggregate \
+  dnsutils \
+  fzf \
+  gh \
   git \
+  gnupg2 \
+  iproute2 \
+  ipset \
+  iptables \
+  jq \
+  man-db \
   procps \
   sudo \
-  fzf \
-  zsh \
-  man-db \
   unzip \
-  gnupg2 \
-  gh \
-  iptables \
-  ipset \
-  iproute2 \
-  dnsutils \
-  aggregate \
-  jq
+  zsh 
 
 # Ensure default node user has access to /usr/local/share
 RUN mkdir -p /usr/local/share/npm-global && \
